@@ -67,22 +67,18 @@ class ViewController: UIViewController {
                     self.lblDirector.text = director
                 }
                 
-                if let poster = dictMovie.value(forKey: "Poster") as? String{
-                    self.imgPoster.image = UIImage(named:poster)
-                }
-                
                 if let response = dictMovie.value(forKey: "Response") as? String{
                     if response == "False"
                     {
                         self.lblNotFound.isHidden = false
                         
-                        self.lblMovie.text = ""
-                        self.lblYear.text = ""
-                        self.lblRating.text = ""
-                        self.lblRating.text = ""
-                        self.lblRuntime.text = ""
-                        self.lblGenre.text = ""
-                        self.lblDirector.text = ""
+                        self.lblMovie.text = "Movie: "
+                        self.lblYear.text = "Year: "
+                        self.lblRating.text = "Rating: "
+                        self.lblRating.text = "Rating: "
+                        self.lblRuntime.text = "Runtime: "
+                        self.lblGenre.text = "Genre: "
+                        self.lblDirector.text = "Director: "
                         
                     }
                     if response == "True"
